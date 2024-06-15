@@ -82,17 +82,6 @@ return {
 			},
 		})
 
-		lsp_config.eslint.setup({
-			---@diagnostic disable-next-line: unused-local
-			on_attach = function(client, bufnr)
-				vim.api.nvim_create_autocmd("BufWritePre", {
-					buffer = bufnr,
-					command = "EslintFixAll",
-				})
-			end,
-			workingDirectories = { mode = "auto" },
-		})
-
 		lsp_config.stylelint_lsp.setup({
 			filetypes = {
 				"css",
