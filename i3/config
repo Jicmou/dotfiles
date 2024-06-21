@@ -47,6 +47,10 @@ exec --no-startup-id i3-msg 'workspace 2:term; exec kitty'
 exec --no-startup-id i3-msg 'workspace 3:web; exec firefox'
 exec --no-startup-id i3-msg 'workspace 4:chat; exec Discord'
 
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
+
 # Set keyboard repeat delay and repeat speed.
 exec xset r rate 300 100
 
