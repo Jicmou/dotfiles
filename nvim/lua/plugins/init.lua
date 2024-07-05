@@ -13,6 +13,11 @@ return {
 	-- Allows you to surround wih parens, quotes, tags ...
 	"tpope/vim-surround",
 
+	-- Repeats also plugin mappings, which is kind of cool.
+	"tpope/vim-repeat",
+
 	-- Git signs in gutter
 	"airblade/vim-gitgutter",
+
+	"vim-scripts/ReplaceWithRegister",
 }
