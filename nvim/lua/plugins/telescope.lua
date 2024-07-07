@@ -24,5 +24,6 @@ return {
 		vim.keymap.set("n", "<leader>fo", builtin.vim_options, {})
 		vim.keymap.set("n", "<leader>f*", builtin.grep_string, {})
 		vim.keymap.set("n", "<leader>ft", builtin.builtin, {})
+		vim.keymap.set("n", "<leader>fk", builtin.keymaps, {})
 	end,
 }
