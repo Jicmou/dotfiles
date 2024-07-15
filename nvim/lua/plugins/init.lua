@@ -6,9 +6,6 @@ return {
 	-- Coerction: easily convert string in camelCase, snake_case, TitleCase...
 	"tpope/vim-abolish",
 
-	-- Git integration so awesome it should be illegal
-	"tpope/vim-fugitive",
-
 	-- Should-be-builtin-kind-of-plugin
 	-- Allows you to surround wih parens, quotes, tags ...
 	"tpope/vim-surround",
