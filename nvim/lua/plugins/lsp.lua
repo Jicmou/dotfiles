@@ -133,6 +133,8 @@ return {
 		-- TOML language server
 		lsp_config.taplo.setup({})
 
+		lsp_config.bashls.setup({})
+
 		lsp_zero.setup()
 
 		-- Make sure you setup `cmp` after lsp-zero

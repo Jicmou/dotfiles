@@ -71,6 +71,10 @@ return {
 					require("formatter.filetypes.javascript").prettier,
 				},
 
+				sh = {
+					require("formatter.filetypes.sh").shfmt,
+				},
+
 				-- Use the special "*" filetype for defining formatter configurations on
 				-- any filetype
 				["*"] = {
