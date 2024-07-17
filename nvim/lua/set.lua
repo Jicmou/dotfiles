@@ -19,3 +19,7 @@ vim.opt.colorcolumn = "80"
 
 -- Keep 2 lines up and down when scrolling
 vim.opt.scrolloff = 2
+
+-- grep with ripgrep, ignore git directory,
+-- ignore gitignored files, include hidden files
+vim.opt.grepprg = "rg --vimgrep --hidden -g '!.git/**'"
