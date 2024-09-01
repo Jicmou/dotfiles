@@ -7,8 +7,7 @@ return {
 	event = {
 		-- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
 		-- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
-		"BufReadPre /home/jicmou/notes/**.md",
-		"BufNewFile /home/jicmou/notes/**.md",
+		"BufEnter /home/jicmou/notes",
 	},
 	dependencies = {
 		-- Required.
@@ -34,6 +33,9 @@ return {
 			default_tags = { "daily-notes" },
 			-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
 			template = nil,
+		},
+		ui = {
+			enable = false, -- set to false to disable all additional syntax features
 		},
 
 		-- see below for full list of options 👇
