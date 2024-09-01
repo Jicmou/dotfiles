@@ -59,7 +59,19 @@ return {
 					require("formatter.filetypes.javascript").prettier,
 				},
 
+				react = {
+					require("formatter.filetypes.javascript").prettier,
+				},
+
+				typescriptreact = {
+					require("formatter.filetypes.javascript").prettier,
+				},
+
 				vue = {
+					require("formatter.filetypes.javascript").prettier,
+				},
+
+				svelte = {
 					require("formatter.filetypes.javascript").prettier,
 				},
 
