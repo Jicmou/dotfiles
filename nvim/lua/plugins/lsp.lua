@@ -46,6 +46,7 @@ return {
 				"tsserver",
 				"volar",
 				"yamlls",
+				"svelte",
 			},
 		})
 
@@ -54,6 +55,14 @@ return {
 		})
 
 		lsp_config.cssls.setup({})
+
+		--Enable (broadcasting) snippet capability for completion
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+		require("lspconfig").html.setup({
+			capabilities = capabilities,
+		})
 
 		lsp_config.yamlls.setup({
 			on_attach = function(client)
@@ -134,6 +143,8 @@ return {
 		lsp_config.taplo.setup({})
 
 		lsp_config.bashls.setup({})
+
+		lsp_config.svelte.setup({})
 
 		lsp_zero.setup()
 
