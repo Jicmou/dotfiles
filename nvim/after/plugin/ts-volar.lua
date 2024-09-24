@@ -8,7 +8,7 @@ local vue_typescript_plugin = "/home/jicmou/.local/share/nvim"
 	.. "/@vue/language-server/node_modules"
 	.. "/@vue/typescript-plugin"
 
-lsp_config.tsserver.setup({
+lsp_config.ts_ls.setup({
 	init_options = {
 		-- Mandatory for vue support, along with vue-language-server@2.x
 		plugins = {

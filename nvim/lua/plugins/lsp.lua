@@ -43,7 +43,7 @@ return {
 				"rust_analyzer",
 				"stylelint_lsp",
 				"taplo",
-				"tsserver",
+				"ts_ls",
 				"volar",
 				"yamlls",
 				"svelte",
@@ -55,6 +55,8 @@ return {
 		})
 
 		lsp_config.cssls.setup({})
+
+		lsp_config.eslint.setup({})
 
 		--Enable (broadcasting) snippet capability for completion
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -97,10 +99,6 @@ return {
 				"scss",
 			},
 		})
-
-		--Enable (broadcasting) snippet capability for completion
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 		lsp_config.jsonls.setup({
 			filetypes = { "json", "jsonc" },
