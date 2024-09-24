@@ -316,3 +316,9 @@ bindsym $mod+$shift+$alt+$ctrl+t exec thunar
 
 # obsidian
 bindsym $mod+$shift+$alt+$ctrl+o exec flatpak run md.obsidian.Obsidian
+
+# flameshot
+bindsym $mod+$shift+$alt+$ctrl+p exec flameshot gui
+
+# flameshot
+bindsym $mod+$shift+$alt+$ctrl+z exec flatpak run io.github.zen_browser.zen
