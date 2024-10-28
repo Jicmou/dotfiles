@@ -12,6 +12,12 @@ return {
 	config = function()
 		local codecompanion = require("codecompanion")
 		local adapters = require("codecompanion.adapters")
+
+		-- Add key binding to open CompanionChat
+		vim.keymap.set("n", "<Leader>cc", function()
+			vim.cmd([[CodeCompanionChat]])
+		end, { noremap = true, silent = true })
+
 		codecompanion.setup({
 			strategies = {
 				chat = {
