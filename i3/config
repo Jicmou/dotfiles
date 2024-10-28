@@ -43,7 +43,7 @@ bindsym $mod+o exec i3lock
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec --no-startup-id i3-msg 'workspace 2:term; exec kitty'
+exec --no-startup-id i3-msg 'workspace 2:term; exec kitty --hold tmux new -shome'
 exec --no-startup-id i3-msg 'workspace 3:web; exec firefox'
 exec --no-startup-id i3-msg 'workspace 4:chat; exec Discord'
 
@@ -79,7 +79,7 @@ bindsym XF86AudioPrev exec playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec kitty --hold tmux attach
 
 # kill focused window
 bindsym $mod+Shift+a kill
