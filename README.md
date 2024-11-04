@@ -17,8 +17,6 @@ option being:
 In order to make it work, simply copy the file `01-trackball.conf` into
 `/etc/X11/xorg.conf.d/`
 
-## i3
+## Installation
 
-Just symlink `i3/config` into `.config/i3/config`
-
-or run `./configure`
+Just run `./configure` at the root level of this repo.

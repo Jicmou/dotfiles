@@ -1,10 +1,58 @@
-#! /bin/sh
+#! /bin/bash
 
-if [ -e "$HOME/.config/i3" ]; then
-  echo ".config/i3 exists"
-  stow --restow i3/ --target ~/.config/i3/
+CONFIG_FOLDERS=(i3 i3status kitty nvim yazi)
+
+for config_folder in "${CONFIG_FOLDERS[@]}"; do
+  TARGET_FOLDER="$HOME"/.config/"$config_folder"
+
+  if [ -e "$TARGET_FOLDER" ]; then
+    echo "$TARGET_FOLDER exists. Restowing"
+
+    stow --restow "$config_folder"/ --target "$TARGET_FOLDER"
+
+    echo "$config_folder restowed"
+  else
+    echo "$TARGET_FOLDER folder does not exist. Creating..."
+
+    mkdir "$HOME/.config/$config_folder"
+
+    stow "$config_folder"/ --target ~/.config/"$config_folder"/
+
+    echo "$config_folder stowed"
+  fi
+done
+
+echo "Installing Rofi"
+
+ROFI_CONFIG_DIRECTORY=$HOME/.config/rofi
+ROFI_SHARE_DIRECTORY=$HOME/.local/share/rofi
+
+if [ -e "$ROFI_CONFIG_DIRECTORY" ]; then
+  echo "$ROFI_CONFIG_DIRECTORY exists. Restowing"
+
+  stow --restow --dir rofi config --target "$ROFI_CONFIG_DIRECTORY"
+
+  echo "rofi config restowed"
 else
-  echo "Creating i3 folder"
-  mkdir "$HOME/.config/i3"
-  stow i3/ --target ~/.config/i3/
+  echo "$ROFI_CONFIG_DIRECTORY folder does not exist. Creating..."
+
+  mkdir "$ROFI_CONFIG_DIRECTORY"
+  stow --dir rofi config --target "$ROFI_CONFIG_DIRECTORY"
+
+  echo "rofi config stowed"
+fi
+
+if [ -e "$ROFI_SHARE_DIRECTORY" ]; then
+  echo "$ROFI_SHARE_DIRECTORY exists. Restowing"
+
+  stow --restow --dir rofi share --target "$ROFI_SHARE_DIRECTORY"
+
+  echo "rofi share restowed"
+else
+  echo "$ROFI_SHARE_DIRECTORY folder does not exist. Creating..."
+
+  mkdir "$ROFI_SHARE_DIRECTORY"
+  stow --dir rofi share --target "$ROFI_SHARE_DIRECTORY"
+
+  echo "rofi share stowed"
 fi
