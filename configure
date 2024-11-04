@@ -1,0 +1,10 @@
+#! /bin/sh
+
+if [ -e "$HOME/.config/i3" ]; then
+  echo ".config/i3 exists"
+  stow --restow i3/ --target ~/.config/i3/
+else
+  echo "Creating i3 folder"
+  mkdir "$HOME/.config/i3"
+  stow i3/ --target ~/.config/i3/
+fi
