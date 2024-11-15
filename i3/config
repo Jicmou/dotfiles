@@ -46,6 +46,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id i3-msg 'workspace 2:term; exec kitty --hold tmux new -shome'
 exec --no-startup-id i3-msg 'workspace 3:web; exec firefox'
 exec --no-startup-id i3-msg 'workspace 4:chat; exec Discord'
+exec --no-startup-id i3-msg 'workspace 5:mail; exec thunderbird'
 
 # move focused workspace between monitors
 bindsym $mod+Ctrl+greater move workspace to output right
@@ -311,8 +312,8 @@ bindsym $mod+$shift+$alt+$ctrl+s exec flatpak run com.spotify.Client
 # keymapp
 bindsym $mod+$shift+$alt+$ctrl+k exec keymapp
 
-# thunar
-bindsym $mod+$shift+$alt+$ctrl+t exec thunar
+# thunderbird
+bindsym $mod+$shift+$alt+$ctrl+t exec thunderbird
 
 # obsidian
 bindsym $mod+$shift+$alt+$ctrl+o exec flatpak run md.obsidian.Obsidian
