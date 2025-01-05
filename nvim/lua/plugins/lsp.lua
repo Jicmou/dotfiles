@@ -144,6 +144,13 @@ return {
 
 		lsp_config.svelte.setup({})
 
+		lsp_config.terraformls.setup({})
+
+		lsp_config.ruby_lsp.setup({})
+
+		-- @TODO: Find a way to configure denols to run only on deno projects
+		-- lsp_config.denols.setup({})
+
 		lsp_zero.setup()
 
 		-- Make sure you setup `cmp` after lsp-zero
