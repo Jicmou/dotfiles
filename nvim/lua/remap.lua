@@ -10,14 +10,14 @@ vim.keymap.set("n", "<leader>t", function()
 end)
 
 -- Remap window related moves.
-vim.keymap.set("n", "<leader>hh", "<C-w>h")
-vim.keymap.set("n", "<leader>l", "<C-w>l")
-vim.keymap.set("n", "<leader>j", "<C-w>j")
-vim.keymap.set("n", "<leader>k", "<C-w>k")
-vim.keymap.set("n", "<leader>H", "<C-w>H")
-vim.keymap.set("n", "<leader>L", "<C-w>L")
-vim.keymap.set("n", "<leader>J", "<C-w>J")
+vim.keymap.set("n", "<leader>H", "<c-w>H")
 vim.keymap.set("n", "<leader>K", "<C-w>K")
+vim.keymap.set("n", "<leader>L", "<C-w>L")
+vim.keymap.set("n", "<leader>hh", "<C-w>h")
+vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>J", "<C-w>J")
+vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>l", "<C-w>l")
 
 -- Key bindings I was used to with netrw to open file explorer
 vim.keymap.set("n", "<leader>e", vim.cmd.Explore)
@@ -51,8 +51,8 @@ vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-k>", "<cmd>cprevious<CR>zz")
 
 -- Format code with formatter
-vim.keymap.set("n", "<leader>f", vim.cmd.Format, {})
 vim.keymap.set("n", "<leader>F", vim.cmd.FormatWrite, {})
+vim.keymap.set("n", "<leader>f", vim.cmd.Format, {})
 
 -- Fix all fixable eslint errors in file
 vim.keymap.set("n", "<leader>es", vim.cmd.EslintFixAll, {})
