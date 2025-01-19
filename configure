@@ -1,6 +1,6 @@
 #! /bin/bash
 
-CONFIG_FOLDERS=(i3 i3status kitty nvim yazi)
+CONFIG_FOLDERS=(i3 i3status kitty nvim yazi tmux)
 
 for config_folder in "${CONFIG_FOLDERS[@]}"; do
   TARGET_FOLDER="$HOME"/.config/"$config_folder"
@@ -55,4 +55,17 @@ else
   stow --dir rofi share --target "$ROFI_SHARE_DIRECTORY"
 
   echo "rofi share stowed"
+fi
+
+TPM_PATH=$HOME/.config/tmux/plugins/tpm
+TPM_REMOTE_REPOSITORY=https://github.com/tmux-plugins/tpm
+
+echo "Checking Tmux Plugin Manager is installed"
+if [ -e "$TPM_PATH" ]; then
+  echo "Tmux Plugin Manager already installed. Updating..."
+  git -c $TPM_PATH pull
+else
+  echo "Tmux Plugin Manager not installed. Installing..."
+
+  git clone $TPM_REMOTE_REPOSITORY $TPM_PATH
 fi
