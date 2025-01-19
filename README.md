@@ -20,3 +20,10 @@ In order to make it work, simply copy the file `01-trackball.conf` into
 ## Installation
 
 Just run `./configure` at the root level of this repo.
+
+## Tmux post installation
+
+The `./configure` script is supposed to install the tmux plugin manager.
+All the plugins are declared in the tmux.conf file. However, at this step the plugins
+are not installed.
+We need to install them inside Tmux with the `PREFIX I` key binding
