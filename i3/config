@@ -33,8 +33,10 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# nice background TODO: use a symlink here to change easily
-exec_always feh --bg-fill ~/Downloads/wp9994268-caspar-david-friedrich-wallpapers.jpg
+# In order to have specific configuration for a local environment,
+# You can add an additional file in the `config.d/` directory
+# This directory is gitignored so we can decouple the config we want to share between environments from the config that is environment specific.
+include ~/.config/i3/config.d/*.conf
 
 # i3lock
 bindsym $mod+o exec i3lock
