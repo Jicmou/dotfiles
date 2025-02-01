@@ -63,7 +63,7 @@ TPM_REMOTE_REPOSITORY=https://github.com/tmux-plugins/tpm
 echo "Checking Tmux Plugin Manager is installed"
 if [ -e "$TPM_PATH" ]; then
   echo "Tmux Plugin Manager already installed. Updating..."
-  git -c $TPM_PATH pull
+  git -C $TPM_PATH pull
 else
   echo "Tmux Plugin Manager not installed. Installing..."
 
