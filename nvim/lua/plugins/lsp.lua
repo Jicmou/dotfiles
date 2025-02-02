@@ -34,19 +34,10 @@ return {
 
 		-- make sure these servers are installed
 		require("mason-lspconfig").setup({
+      automatic_installation = true,
 			ensure_installed = {
-				"cssls",
-				"eslint",
-				"jsonls",
 				"lua_ls",
-				"marksman",
-				"rust_analyzer",
-				"stylelint_lsp",
-				"taplo",
 				"ts_ls",
-				"volar",
-				"yamlls",
-				"svelte",
 			},
 		})
 
