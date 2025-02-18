@@ -34,15 +34,19 @@ return {
 
 		-- make sure these servers are installed
 		require("mason-lspconfig").setup({
-      automatic_installation = true,
+			automatic_installation = true,
 			ensure_installed = {
+				-- Not sure why I want to ensure those,
+				-- while automatic_installation should install them anyway
 				"lua_ls",
 				"ts_ls",
+				-- Need to declare those as they're needed by formatter.nvim
+				-- but are not detected by automatic_installation.
+				"prettier",
+				"fixjson",
+				"shfmt",
+				"stylua",
 			},
-		})
-
-		lsp_config.nginx_language_server.setup({
-			filetypes = { "nginx" },
 		})
 
 		lsp_config.cssls.setup({})
