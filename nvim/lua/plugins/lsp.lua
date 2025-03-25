@@ -143,6 +143,10 @@ return {
 
 		lsp_config.ruby_lsp.setup({})
 
+		lsp_config.dockerls.setup({})
+
+		lsp_config.docker_compose_language_server.setup({})
+
 		-- @TODO: Find a way to configure denols to run only on deno projects
 		-- lsp_config.denols.setup({})
 
