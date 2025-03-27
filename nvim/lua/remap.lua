@@ -56,3 +56,6 @@ vim.keymap.set("n", "<leader>f", vim.cmd.Format, {})
 
 -- Fix all fixable eslint errors in file
 vim.keymap.set("n", "<leader>es", vim.cmd.EslintFixAll, {})
+
+-- Copy file name in + register (system clipboard)
+vim.keymap.set("n", "<leader>%", ":let @+ = @%<CR>")
