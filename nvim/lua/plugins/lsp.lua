@@ -56,6 +56,10 @@ return {
 
 		lsp_config.cssls.setup({})
 
+		lsp_config.dockerls.setup({})
+
+		lsp_config.docker_compose_language_service.setup({})
+
 		lsp_config.eslint.setup({})
 
 		--Enable (broadcasting) snippet capability for completion
