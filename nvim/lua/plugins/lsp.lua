@@ -42,10 +42,10 @@ return {
 				"ts_ls",
 				-- Need to declare those as they're needed by formatter.nvim
 				-- but are not detected by automatic_installation.
-				"prettier",
-				"fixjson",
-				"shfmt",
-				"stylua",
+				-- "prettier",
+				-- "fixjson",
+				-- "shfmt",
+				-- "stylua",
 			},
 		})
 
@@ -145,7 +145,7 @@ return {
 
 		lsp_config.dockerls.setup({})
 
-		lsp_config.docker_compose_language_server.setup({})
+		lsp_config.docker_compose_language_service.setup({})
 
 		-- @TODO: Find a way to configure denols to run only on deno projects
 		-- lsp_config.denols.setup({})
