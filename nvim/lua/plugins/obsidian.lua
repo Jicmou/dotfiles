@@ -38,6 +38,17 @@ return {
 			enable = false, -- set to false to disable all additional syntax features
 		},
 
-		-- see below for full list of options 👇
+		-- Optional, define your own callbacks to further customize behavior.
+		callbacks = {
+			-- Runs at the end of `require("obsidian").setup()`.
+			post_setup = function()
+				-- Open today's diary
+				vim.api.nvim_create_user_command("Ot", "ObsidianToday", {})
+				-- Open yesterday's diary
+				vim.api.nvim_create_user_command("Op", "ObsidianYesterday", {})
+				-- Open tomorrow's diary
+				vim.api.nvim_create_user_command("On", "ObsidianTomorrow", {})
+			end,
+		},
 	},
 }
