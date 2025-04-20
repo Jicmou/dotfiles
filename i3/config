@@ -41,15 +41,6 @@ include ~/.config/i3/config.d/*.conf
 # i3lock
 bindsym $mod+o exec i3lock
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-exec --no-startup-id i3-msg 'workspace 2:term; exec kitty --hold ~/scripts/tmux-start-sessions.sh'
-exec --no-startup-id i3-msg 'workspace 3:web; exec firefox'
-exec --no-startup-id i3-msg 'workspace 4:chat; exec Discord'
-exec --no-startup-id i3-msg 'workspace 5:mail; exec thunderbird'
-
 # move focused workspace between monitors
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
