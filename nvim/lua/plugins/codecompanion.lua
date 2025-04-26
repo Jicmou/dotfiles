@@ -38,6 +38,11 @@ return {
 						},
 					})
 				end,
+				ollama = function()
+					return adapters.extend("ollama", {
+						model = "mistral",
+					})
+				end,
 			},
 		})
 	end,
