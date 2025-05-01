@@ -79,7 +79,7 @@ return {
 				end,
 			},
 			display = {
-				chat = { show_settings = true },
+				chat = { show_settings = false },
 				diff = {
 					enabled = true,
 					close_chat_at = 0, -- Close an open chat buffer if the total columns of your display are less than...
