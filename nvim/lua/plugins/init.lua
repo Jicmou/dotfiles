@@ -12,6 +12,4 @@ return {
 
 	-- Repeats also plugin mappings, which is kind of cool.
 	"tpope/vim-repeat",
-
-	"vim-scripts/ReplaceWithRegister",
 }
