@@ -1,22 +1,25 @@
+-- Load custom configuration files for keymaps and settings
 require("remap")
 require("set")
 
+-- Define path for Lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
--- Install lazy
+-- Install Lazy if not already present
 ---@diagnostic disable-next-line: undefined-field
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
 		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
+		"--filter=blob:none", -- Faster clone by filtering blobs
+		"https://github.com/folke/lazy.nvim.git", -- Repository URL
+		"--branch=stable", -- Use stable release branch
+		lazypath, -- Destination path
 	})
 end
 
----@diagnostic disable-next-line: undefined-field
+-- Add Lazy to Vim runtime path (for plugin loading)
 vim.opt.rtp:prepend(lazypath)
 
+-- Initialize Lazy with plugins configuration
 require("lazy").setup("plugins")
