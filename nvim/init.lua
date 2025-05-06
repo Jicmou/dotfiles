@@ -23,3 +23,9 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Initialize Lazy with plugins configuration
 require("lazy").setup("plugins")
+
+-- Only display diagnostics for the current line
+vim.diagnostic.config({ virtual_text = { current_line = true } })
+
+-- enable lsp
+vim.lsp.enable({ "lua_ls" })
