@@ -38,12 +38,11 @@ return {
 			custom_highlights = {},
 			integrations = {
 				cmp = true,
-				nvimtree = true,
-				telescope = true,
-				notify = false,
-				mini = false,
-				gitgutter = true,
+				copilot_vim = true,
+				gitsigns = true,
 				markdown = true,
+				mason = true,
+				mini = false,
 				native_lsp = {
 					enabled = true,
 					virtual_text = {
@@ -64,7 +63,10 @@ return {
 						background = true,
 					},
 				},
-				mason = true,
+				notify = false,
+				nvimtree = true,
+				telescope = true,
+				treesitter = true,
 				-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 			},
 		})
