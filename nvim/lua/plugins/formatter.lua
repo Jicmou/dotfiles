@@ -106,5 +106,9 @@ return {
 			end,
 			group = formatAutogroup,
 		})
+
+		-- Format code key mappings
+		vim.keymap.set("n", "<leader>F", vim.cmd.FormatWrite, {})
+		vim.keymap.set("n", "<leader>f", vim.cmd.Format, {})
 	end,
 }

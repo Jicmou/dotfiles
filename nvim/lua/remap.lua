@@ -50,10 +50,6 @@ vim.keymap.set("v", "<leader>d", '"_d')
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-k>", "<cmd>cprevious<CR>zz")
 
--- Format code with formatter
-vim.keymap.set("n", "<leader>F", vim.cmd.FormatWrite, {})
-vim.keymap.set("n", "<leader>f", vim.cmd.Format, {})
-
 -- Fix all fixable eslint errors in file
 vim.keymap.set("n", "<leader>es", vim.cmd.EslintFixAll, {})
 
