@@ -28,4 +28,4 @@ require("lazy").setup("plugins")
 vim.diagnostic.config({ virtual_text = { current_line = true } })
 
 -- enable lsp
-vim.lsp.enable({ "lua_ls" })
+vim.lsp.enable({ "lua_ls", "ts_ls", "vue_ls" })
