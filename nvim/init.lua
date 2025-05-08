@@ -1,7 +1,16 @@
--- Load custom configuration files for keymaps and settings
-require("remap")
+-- Load configuration files
+
+-- Load settings
 require("set")
 
+-- Load global remaps
+require("remap")
+
+-- Load lsp configs
+require("lsp")
+
+-- Lazy plugin manager
+--
 -- Define path for Lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -23,9 +32,3 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Initialize Lazy with plugins configuration
 require("lazy").setup("plugins")
-
--- Only display diagnostics for the current line
-vim.diagnostic.config({ virtual_text = { current_line = true } })
-
--- enable lsp
-vim.lsp.enable({ "lua_ls", "ts_ls", "vue_ls" })
