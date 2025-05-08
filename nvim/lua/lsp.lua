@@ -2,4 +2,4 @@
 vim.diagnostic.config({ virtual_text = { current_line = true } })
 
 -- enable lsp
-vim.lsp.enable({ "lua_ls", "ts_ls", "vue_ls" })
+vim.lsp.enable({ "bash_ls", "lua_ls", "ts_ls", "vue_ls" })
