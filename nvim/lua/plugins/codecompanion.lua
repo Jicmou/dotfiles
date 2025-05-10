@@ -43,10 +43,10 @@ return {
 		codecompanion.setup({
 			strategies = {
 				chat = {
-					adapter = "copilot",
+					adapter = "ollama",
 				},
 				inline = {
-					adapter = "copilot",
+					adapter = "ollama",
 					keymaps = {
 						accept_change = {
 							modes = { n = "ga" },
@@ -60,12 +60,13 @@ return {
 					layout = "vertical", -- vertical|horizontal|buffer
 				},
 				agent = {
-					adapter = "copilot",
+					adapter = "ollama",
 				},
 			},
 			adapters = {
 				opts = {
-					show_defaults = false,
+					show_defaults = false, -- Show default adapters
+					show_model_choices = true, -- Show model choices when changing adapter
 				},
 				copilot = function()
 					return require("codecompanion.adapters").extend("copilot", {
@@ -74,7 +75,7 @@ return {
 				end,
 				ollama = function()
 					return adapters.extend("ollama", {
-						schema = { model = { default = "qwen2.5-coder:7b" } },
+						schema = { model = { default = "qwen3:8b" } },
 					})
 				end,
 			},
