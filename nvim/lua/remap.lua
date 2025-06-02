@@ -50,8 +50,5 @@ vim.keymap.set("v", "<leader>d", '"_d')
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-k>", "<cmd>cprevious<CR>zz")
 
--- Fix all fixable eslint errors in file
-vim.keymap.set("n", "<leader>es", vim.cmd.EslintFixAll, {})
-
 -- Copy file name in + register (system clipboard)
 vim.keymap.set("n", "<leader>%", ":let @+ = @%<CR>")
