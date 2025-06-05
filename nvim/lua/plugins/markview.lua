@@ -7,6 +7,11 @@ return {
 		split = "right",
 	},
 
+	-- disable gx mapping that interfers with native gx that I use a lot
+	preview = {
+		map_gx = false,
+	},
+
 	dependencies = {
 		-- You will not need this if you installed the
 		-- parsers manually
