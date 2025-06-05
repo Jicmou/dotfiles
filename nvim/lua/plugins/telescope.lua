@@ -1,4 +1,5 @@
 -- Awesome Fuzzy Finder
+-- https://www.github.com/nvim-telescope/telescope.nvim
 return {
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",

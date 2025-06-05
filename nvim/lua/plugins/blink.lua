@@ -1,3 +1,4 @@
+-- https://www.github.com/saghen/blink.cmp
 return {
 	"saghen/blink.cmp",
 	-- optional: provides snippets for the snippet source

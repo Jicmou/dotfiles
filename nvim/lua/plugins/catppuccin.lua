@@ -1,4 +1,5 @@
 -- Nice colorscheme
+-- https://www.github.com/catppuccin/nvim
 return {
 	"catppuccin/nvim",
 	name = "catppuccin",

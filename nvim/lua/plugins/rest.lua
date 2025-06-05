@@ -1,3 +1,4 @@
+-- https://www.github.com/rest-nvim/rest.nvim
 return {
 	"rest-nvim/rest.nvim",
 	dependencies = {

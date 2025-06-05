@@ -1,3 +1,4 @@
+-- https://www.github.com/epwalsh/obsidian.nvim
 return {
 	"epwalsh/obsidian.nvim",
 	version = "*", -- recommended, use latest release instead of latest commit

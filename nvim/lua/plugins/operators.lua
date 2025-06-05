@@ -1,3 +1,4 @@
+-- https://www.github.com/echasnovski/mini.operators
 return {
 	"echasnovski/mini.operators",
 	version = "*",

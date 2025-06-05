@@ -1,4 +1,5 @@
 -- Syntax highlighting on steroids
+-- https://www.github.com/nvim-treesitter/nvim-treesitter
 return {
 	"nvim-treesitter/nvim-treesitter",
 	config = function()

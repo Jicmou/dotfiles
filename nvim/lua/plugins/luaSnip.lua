@@ -1,3 +1,4 @@
+-- https://www.github.com/L3MON4D3/LuaSnip
 return {
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.

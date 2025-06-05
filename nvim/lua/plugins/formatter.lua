@@ -1,5 +1,6 @@
+-- https://www.github.com/mhartington/formatter.nvim
+-- All-in-one formatters, It's kind of slow so not sure I'll keep it.
 return {
-	-- All-in-one formatters, It's kind of slow so not sure I'll keep it.
 	"mhartington/formatter.nvim",
 	config = function()
 		-- Utilities for creating configurations

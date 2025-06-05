@@ -1,3 +1,4 @@
+-- https://www.github.com/tpope/vim-fugitive
 return {
 	-- Git integration so awesome it should be illegal
 	"tpope/vim-fugitive",
