@@ -7,6 +7,13 @@ the scripts needed to install them smoothly.
 
 You need [stow](https://www.gnu.org/software/stow/stow.html) in order to configure the dotfiles
 
+## X11 keyboard configuration
+
+This small config file sets up my keyboard to a QWERTY-intl-altgr layout
+
+In order to make it work, simply copy the file `00-keyboard.conf` into
+`/etc/X11/xorg.conf.d/`
+
 ## X11 trackball configuration
 
 This small config file sets up my Kensington slimblade pro. The most important
