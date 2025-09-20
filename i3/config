@@ -293,26 +293,27 @@ bar {
 
 # programs shortcuts
 
-# firefox
-bindsym $mod+$shift+$alt+$ctrl+f exec firefox
+# brave
+bindsym $mod+$shift+$alt+$ctrl+b exec brave gui
 
 # chromium
-bindsym $mod+$shift+$alt+$ctrl+c exec chromium-browser
+bindsym $mod+$shift+$alt+$ctrl+c exec chromium
 
-# spotify
-bindsym $mod+$shift+$alt+$ctrl+s exec flatpak run com.spotify.Client
+# firefox
+bindsym $mod+$shift+$alt+$ctrl+f exec firefox
 
 # keymapp
 bindsym $mod+$shift+$alt+$ctrl+k exec keymapp
 
-# thunderbird
-bindsym $mod+$shift+$alt+$ctrl+t exec thunderbird
-
 # obsidian
-bindsym $mod+$shift+$alt+$ctrl+o exec flatpak run md.obsidian.Obsidian
+bindsym $mod+$shift+$alt+$ctrl+o exec obsidian
 
 # flameshot
 bindsym $mod+$shift+$alt+$ctrl+p exec flameshot gui
 
-# flameshot
-bindsym $mod+$shift+$alt+$ctrl+z exec flatpak run io.github.zen_browser.zen
+# spotify
+bindsym $mod+$shift+$alt+$ctrl+s exec spotify
+
+# thunderbird
+bindsym $mod+$shift+$alt+$ctrl+t exec thunderbird
+
