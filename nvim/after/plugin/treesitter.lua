@@ -22,8 +22,6 @@ treesitter.install({
 	"jq",
 	"jsdoc",
 	"json",
-	"json5",
-	"jsonc",
 	"lua",
 	"luadoc",
 	"make",
