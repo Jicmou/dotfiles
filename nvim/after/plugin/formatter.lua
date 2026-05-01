@@ -106,5 +106,4 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 -- Format code key mappings
-vim.keymap.set("n", "<leader>F", vim.cmd.FormatWrite, {})
-vim.keymap.set("n", "<leader>f", vim.cmd.Format, {})
+vim.keymap.set("n", "<leader>gq", vim.cmd.Format, {})
