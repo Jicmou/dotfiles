@@ -21,16 +21,35 @@ require("obsidian").setup({
 		enable = false, -- set to false to disable all additional syntax features
 	},
 
-	-- Optional, define your own callbacks to further customize behavior.
-	callbacks = {
-		-- Runs at the end of `require("obsidian").setup()`.
-		post_setup = function()
-			-- Open today's diary
-			vim.api.nvim_create_user_command("Ot", "ObsidianToday", {})
-			-- Open yesterday's diary
-			vim.api.nvim_create_user_command("Op", "ObsidianYesterday", {})
-			-- Open tomorrow's diary
-			vim.api.nvim_create_user_command("On", "ObsidianTomorrow", {})
-		end,
-	},
+	notes_subdir = "0-inputs",
+
+	-- Where to put new notes. Valid options are
+	--  * "current_dir" - put new notes in same directory as the current buffer.
+	--  * "notes_subdir" - put new notes in the default notes subdirectory.
+	new_notes_location = "notes_subdir",
+
+	-- Optional, customize how note IDs are generated given an optional title.
+	---@param title string|?
+	---@return string
+	note_id_func = function(title)
+		-- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
+		-- In this case a note with the title 'My new note' will be given an ID that looks
+		-- like '1657296016-my-new-note', and therefore the file name '1657296016-my-new-note.md'
+		local suffix = ""
+		if title ~= nil then
+			-- If title is given, transform it into valid file name.
+			suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+		else
+			-- If title is nil, just add 4 random uppercase letters to the suffix.
+			for _ = 1, 4 do
+				suffix = suffix .. string.char(math.random(65, 90))
+			end
+		end
+		return tostring(os.time()) .. "-" .. suffix
+	end,
 })
+
+vim.keymap.set("n", "<leader>ot", vim.cmd.ObsidianToday)
+vim.keymap.set("n", "<leader>oy", vim.cmd.ObsidianYesterday)
+vim.keymap.set("n", "<leader>on", vim.cmd.ObsidianNew)
+vim.keymap.set("n", "<leader>os", vim.cmd.ObsidianSearch)
