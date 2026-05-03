@@ -74,7 +74,7 @@ require("formatter").setup({
 		},
 
 		json = {
-			require("formatter.filetypes.json").fixjson,
+			require("formatter.filetypes.json").prettier,
 		},
 
 		markdown = {
