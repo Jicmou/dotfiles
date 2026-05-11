@@ -63,7 +63,7 @@ codecompanion.setup({
 		end,
 		ollama = function()
 			return adapters.extend("ollama", {
-				schema = { model = { default = "qwen3.5:9b" } },
+				schema = { model = { default = "qwen3.6:35b" } },
 			})
 		end,
 	},
