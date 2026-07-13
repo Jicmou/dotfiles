@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 
 -- Remove all windows except the current one.
-vim.keymap.set("n", "<leader>o", vim.cmd.only)
+vim.keymap.set("n", "<leader>oo", vim.cmd.only)
 
 -- Toggles search highlighting.
 vim.keymap.set("n", "<leader>t", function()
