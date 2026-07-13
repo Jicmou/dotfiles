@@ -52,7 +52,7 @@ exec xset r rate 300 100
 exec xset -dpms
 
 # Set double keyboard layouts, us-altgr-intl & fr-ergol. Press alt+ctrl to toggle
-exec setxkbmap -layout us,fr -variant altgr-intl,ergol -option grp:ctrl_alt_toggle
+exec setxkbmap -layout us,fr -variant altgr-intl,ergol -option grp:win_space_toggle
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
