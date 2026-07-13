@@ -107,3 +107,22 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
 -- Format code key mappings
 vim.keymap.set("n", "<leader>gq", vim.cmd.Format, {})
+
+-- Global variable to track if format on save is enabled
+local format_on_save_enabled = true
+
+-- Command to toggle formatting on save
+vim.api.nvim_create_user_command("ToggleFormatOnSave", function()
+	format_on_save_enabled = not format_on_save_enabled
+	if format_on_save_enabled then
+		vim.cmd("augroup FormatAutogroup | autocmd! | autocmd BufWritePost * silent! lua vim.cmd('FormatWrite')")
+		print("format on save enabled")
+	else
+		vim.cmd("augroup FormatAutogroup | autocmd!")
+		print("format on save disabled")
+	end
+end, {})
+
+-- Key binding to toggle format on save
+vim.api.nvim_set_keymap("n", "<leader>gt", ":lua vim.cmd('ToggleFormatOnSave')<CR>", { noremap = true, silent = true })
+-- ...existing code...
