@@ -20,6 +20,7 @@ require("mason-tool-installer").setup({
 		-- you can do conditional installing
 		-- { 'gopls', condition = function() return vim.fn.executable('go') == 1 end },
 
+		-- language servers
 		"css-lsp",
 		"css-variables-language-server",
 		"docker-compose-language-service",
@@ -29,14 +30,18 @@ require("mason-tool-installer").setup({
 		"json-lsp",
 		"lua-language-server",
 		"marksman",
-		"prettier",
-		"shellcheck",
-		"shfmt",
-		"stylua",
 		"typescript-language-server",
 		"vtsls",
 		"vue-language-server",
 		"yaml-language-server",
+
+		-- linters
+		"shellcheck",
+
+		-- formatters
+		"prettier",
+		"shfmt",
+		"stylua",
 	},
 
 	-- if set to true this will check each tool for updates. If updates
