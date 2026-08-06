@@ -44,4 +44,5 @@ vim.pack.add({
 	gh("nvim-telescope/telescope.nvim"),
 	{ src = gh("catppuccin/nvim"), name = "catppuccin" },
 	gh("neovim/nvim-lspconfig"),
+	gh("mfussenegger/nvim-lint"), -- asynchronous all-in-one linter plugin
 })
