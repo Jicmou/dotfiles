@@ -24,7 +24,6 @@ require("mason-tool-installer").setup({
 		"css-variables-language-server",
 		"docker-compose-language-service",
 		"dockerfile-language-server",
-		"editorconfig-checker",
 		"eslint-lsp",
 		"html-lsp",
 		"json-lsp",
