@@ -85,6 +85,10 @@ require("formatter").setup({
 			require("formatter.filetypes.sh").shfmt,
 		},
 
+		rust = {
+			require("formatter.filetypes.rust").rustfmt,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
