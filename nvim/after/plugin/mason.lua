@@ -31,6 +31,7 @@ require("mason-tool-installer").setup({
 		"lua-language-server",
 		"marksman",
 		"rust-analyzer",
+		"taplo",
 		"typescript-language-server",
 		"vtsls",
 		"vue-language-server",

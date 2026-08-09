@@ -21,6 +21,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"marksman",
 	"rust_analyzer",
+	"taplo",
 	"ts_ls",
 	"vue_ls",
 	"yamlls",
