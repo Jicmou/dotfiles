@@ -20,6 +20,7 @@ vim.lsp.enable({
 	"jsonls",
 	"lua_ls",
 	"marksman",
+	"postgres_lsp",
 	"rust_analyzer",
 	"taplo",
 	"ts_ls",

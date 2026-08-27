@@ -30,6 +30,7 @@ require("mason-tool-installer").setup({
 		"json-lsp",
 		"lua-language-server",
 		"marksman",
+		"postgres-language-server",
 		"rust-analyzer",
 		"taplo",
 		"typescript-language-server",
